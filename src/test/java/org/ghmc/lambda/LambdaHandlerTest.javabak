@@ -1,5 +1,6 @@
 package org.ghmc.lambda;
 
+import org.ghmc.model.Person;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

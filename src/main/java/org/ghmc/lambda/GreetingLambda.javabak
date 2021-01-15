@@ -1,0 +1,23 @@
+package org.ghmc.lambda;
+
+import org.ghmc.model.Person;
+import org.kie.kogito.rules.DataSource;
+import org.kie.kogito.rules.DataStore;
+import org.kie.kogito.rules.RuleUnitData;
+
+import com.amazonaws.services.lambda.runtime.Context;
+import com.amazonaws.services.lambda.runtime.RequestHandler;
+
+public class GreetingLambda implements RequestHandler<Person, String>, RuleUnitData {
+
+    DataStore<String> strings = DataSource.createStore();
+
+    public DataStore<String> getStrings() {
+        return strings;
+    }
+    
+    @Override
+    public String handleRequest(Person input, Context context) {
+        return "Hello " + input.getName();
+    }
+}

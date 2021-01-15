@@ -1,47 +1,19 @@
 # lambda-drools project
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+Setup aws-cli
 
-If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-awscli.html
 
-## Running the application in dev mode
+setup the aws execution role either by using the management console or the command line
 
-You can run your application in dev mode that enables live coding using:
-```shell script
-./mvnw compile quarkus:dev
-```
+add the execution role to the system variable
+ ex/
+ LAMBDA_ROLE_ARN="arn:aws:iam::1234567890:role/lambda-role"
 
-## Packaging and running the application
 
-The application can be packaged using:
-```shell script
-./mvnw package
-```
-It produces the `lambda-drools-1.0.0-SNAPSHOT-runner.jar` file in the `/target` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/lib` directory.
 
-If you want to build an _über-jar_, execute the following command:
-```shell script
+
 ./mvnw package -Dquarkus.package.type=uber-jar
-```
-
-The application is now runnable using `java -jar target/lambda-drools-1.0.0-SNAPSHOT-runner.jar`.
-
-## Creating a native executable
-
-You can create a native executable using: 
-```shell script
-./mvnw package -Pnative
-```
-
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
-```shell script
-./mvnw package -Pnative -Dquarkus.native.container-build=true
-```
-
-You can then execute your native executable with: `./target/lambda-drools-1.0.0-SNAPSHOT-runner`
-
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.html.
 
 # Amazon Lambda Integration
 
@@ -49,3 +21,10 @@ If you want to learn more about building native executables, please consult http
 
 
 Guide: https://quarkus.io/guides/amazon-lambda
+
+
+
+
+
+
+
