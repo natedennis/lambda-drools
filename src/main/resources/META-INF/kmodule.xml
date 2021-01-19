@@ -1,5 +1,5 @@
 <kmodule xmlns="http://www.drools.org/xsd/kmodule">
   <kbase packages="*" name="kbase" default="true" eventProcessingMode="stream" equalsBehavior="identity">
-        <ksession name="ksession" />
+        <ksession name="defaultStatelessKieSession" />
   </kbase>
 </kmodule>
